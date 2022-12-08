@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Gamer Over</title>
+    <script>
+        function reniciar(){
+            window.location.href = "inicio.html";
+        }
+    </script>
+</head>
+<body>
+    <div id="over">
+        <div>
+            <div>
+                <img src="imagens/mosca.png" alt="" id="mosca_inicial">
+            </div>
+        </div>
+       
+            <div id="game_over">
+                <div>
+                    <div>
+                        <img src="imagens/game_over.png" alt="">
+                    </div>
+                </div>
+            
+            <div class="btn_over">
+                <div>
+                    <button onclick="reniciar()">Reniciar</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!--script-->
+    <script>
+        function animacao(){
+            var mosca = document.getElementById("mosca_inicial");
+            mosca.className="mosca";
+            setTimeout(function(){
+                mosca.remove();
+                var game_over = document.getElementById("game_over");
+                game_over.style.display = "flex";
+            }, 3000)
+        }
+        animacao();
+        
+    </script>
+    
+</body>
+</html>

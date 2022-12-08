@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata mosquito</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function inicio(){
+            var nivel = document.getElementById("select_nivel").value;
+            if(nivel === ""){
+                alert("selecione um nivel");
+            }
+            else{
+            window.location.href = "inicio.html?" + nivel;
+            }
+
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="inicio">
+        <div id="game">
+            <div>
+                <img src="imagens/game.png" alt="">
+            </div>
+        </div>
+        <div id="nivel">
+            <div>
+                <select name="" id="select_nivel">
+                    <option value="">---Nivel---</option>
+                    <option value="facil">Facil</option>
+                    <option value="normal">Normal</option>
+                    <option value="dificil">Dificil</option>
+                    <option value="impossivel">Impossivel</option>
+                </select>
+            </div>
+        </div>
+        <div id="btn_inicio">
+            <div>
+                <button value="Inicio" onclick="inicio()">Inicio</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
